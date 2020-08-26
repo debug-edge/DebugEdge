@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name OpenClip)(type Legacy)(uri ${KIPRJMOD}/OpenClip.lib)(options "")(descr ""))
+)
