@@ -1,6 +1,6 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP OpenClip_SWD
+$CMP DebugEdge_SWD
 D A Serial Wire Debug (SWD) Compatable Adapter for the AVX Open Ended Card Edge
 F http://datasheets.avx.com/OpenEndedCard%20Edge_00-9159.pdf
 $ENDCMP
