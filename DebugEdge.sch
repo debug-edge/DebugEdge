@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "DebugEdge SWD Adapter"
-Date "2020-08-26"
+Date "2020-08-27"
 Rev "1"
 Comp "debug-edge.io"
-Comment1 "Based on @GregDavill and @tannewt's ideas!"
+Comment1 "Brainchild of @tannewt, @_nitz, and @GregDavill"
 Comment2 ""
 Comment3 ""
 Comment4 ""
