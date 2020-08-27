@@ -1,0 +1,43 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_DebugEdge_DebugEdge_02x05
+#
+DEF Connector_DebugEdge_DebugEdge_02x05 J 0 40 Y Y 1 F N
+F0 "J" -400 300 50 H V C CNN
+F1 "Connector_DebugEdge_DebugEdge_02x05" 450 300 50 H V C CNN
+F2 "" 0 400 50 H I C CNN
+F3 "" 0 400 50 H I C CNN
+DRAW
+S -650 250 650 -250 0 1 0 f
+X GND 1 0 350 100 D 50 50 1 1 W
+X TRACE1 10 750 -200 100 L 50 50 1 1 B
+X SWDIO/TMS 2 -750 100 100 R 50 50 1 1 B
+X SWDCLK/TCLK 3 -750 0 100 R 50 50 1 1 B
+X ~RESET~ 4 -750 -100 100 R 50 50 1 1 B
+X Vref 5 0 -350 100 U 50 50 1 1 W
+X SWO/TDO 6 750 200 100 L 50 50 1 1 B
+X NC/TDI 7 750 100 100 L 50 50 1 1 B
+X TRACE_CLK 8 750 0 100 L 50 50 1 1 B
+X TRACE0 9 750 -100 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# Connector_TestPoint
+#
+DEF Connector_TestPoint TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "Connector_TestPoint" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Connector_DebugEdge)(type Legacy)(uri ${KIPRJMOD}/../Connector_DebugEdge.lib)(options "")(descr ""))
+)
