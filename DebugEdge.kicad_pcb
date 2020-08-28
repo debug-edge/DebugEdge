@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.6)-1")
+(kicad_pcb (version 20171130) (host pcbnew 5.1.6)
 
   (general
     (thickness 1.6)
-    (drawings 11)
+    (drawings 13)
     (tracks 81)
     (zones 0)
     (modules 5)
@@ -130,15 +130,22 @@
     (add_net VCC)
   )
 
-  (module Connector_DebugEdge:DebugEdge_2x05_Host (layer F.Cu) (tedit 5F47DF0E) (tstamp 5F46580B)
+  (module Connector_DebugEdge:DebugEdge_2x05_Host (layer F.Cu) (tedit 5F48800F) (tstamp 5F46580B)
     (at 170 95 270)
     (path /5F46B9DC)
     (fp_text reference J2 (at -5.4 2.5 180) (layer F.SilkS)
       (effects (font (size 0.5 0.5) (thickness 0.125)))
     )
-    (fp_text value DebugEdge_02x05 (at -1.2 -2 270) (layer F.Fab)
+    (fp_text value DebugEdge_02x05 (at -1.2 -2 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_poly (pts (xy -2.5 4.5) (xy -3.5 4.4) (xy -3.5 0.5) (xy -2.5 0.5)) (layer F.SilkS) (width 0))
+    (fp_poly (pts (xy -1.3 3.2) (xy -1.5 3.2) (xy -1.5 0.5) (xy -1.3 0.5)) (layer F.SilkS) (width 0))
+    (fp_poly (pts (xy -0.5 3.2) (xy -0.7 3.2) (xy -0.7 0.5) (xy -0.5 0.5)) (layer F.SilkS) (width 0))
+    (fp_poly (pts (xy -0.5 4.6) (xy -1 4.65) (xy -1.5 4.6) (xy -1.5 3.2)
+      (xy -0.5 3.2)) (layer F.SilkS) (width 0))
+    (fp_poly (pts (xy 1.5 4.4) (xy 0.5 4.5) (xy 0.5 0.5) (xy 1.5 0.5)) (layer F.SilkS) (width 0))
+    (fp_poly (pts (xy 3.5 4.2) (xy 2.5 4.3) (xy 2.5 0.5) (xy 3.5 0.5)) (layer F.SilkS) (width 0))
     (fp_line (start 5 -0.5) (end 5 5) (layer B.CrtYd) (width 0.05))
     (fp_line (start -5 -0.5) (end 5 -0.5) (layer B.CrtYd) (width 0.05))
     (fp_line (start -5 5) (end -5 -0.5) (layer B.CrtYd) (width 0.05))
@@ -151,29 +158,77 @@
     (fp_line (start -5 0) (end -1.3 0) (layer Edge.Cuts) (width 0.05))
     (fp_line (start -0.7 2.8) (end -0.7 0) (layer Edge.Cuts) (width 0.05))
     (fp_line (start -1.3 0) (end -1.3 2.8) (layer Edge.Cuts) (width 0.05))
-    (fp_line (start -2 0.25) (end -2.75 0.25) (layer F.SilkS) (width 0.12))
-    (fp_line (start -2.75 0.25) (end -2.75 1) (layer F.SilkS) (width 0.12))
     (fp_arc (start -1 2.8) (end -1.3 2.8) (angle -180) (layer Edge.Cuts) (width 0.05))
-    (pad 9 smd rect (at 4 2.5 270) (size 1 4) (layers F.Cu F.Mask)
-      (net 8 "Net-(J1-Pad9)"))
-    (pad 5 smd rect (at 2 2.5 270) (size 1 4) (layers F.Cu F.Mask)
-      (net 11 "Net-(J2-Pad5)"))
-    (pad 2 smd rect (at 0 2.5 270) (size 1 4) (layers F.Cu F.Mask)
-      (net 4 /SWDIO))
-    (pad 1 smd rect (at -2 2.5 270) (size 1 4) (layers F.Cu F.Mask)
-      (net 2 GND))
-    (pad 7 smd rect (at -4 2.5 270) (size 1 4) (layers F.Cu F.Mask)
-      (net 6 "Net-(J1-Pad7)"))
-    (pad 10 smd rect (at 4 2.5 270) (size 1 4) (layers B.Cu B.Mask)
-      (net 7 "Net-(J1-Pad10)"))
-    (pad 6 smd rect (at 2 2.5 270) (size 1 4) (layers B.Cu B.Mask)
-      (net 10 "Net-(J1-Pad6)"))
-    (pad 3 smd rect (at -2 2.5 270) (size 1 4) (layers B.Cu B.Mask)
-      (net 3 /SWCLK))
-    (pad 8 smd rect (at -4 2.5 270) (size 1 4) (layers B.Cu B.Mask)
-      (net 9 "Net-(J1-Pad8)"))
-    (pad 4 smd rect (at 0 2.5 270) (size 1 4) (layers B.Cu B.Mask)
-      (net 1 /~RESET~))
+    (pad 9 smd custom (at 4 2.3 270) (size 1 3.6) (layers F.Cu F.Mask)
+      (net 8 "Net-(J1-Pad9)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.8) (xy -0.5 1.9) (xy 0.5 1.8)) (width 0))
+      ))
+    (pad 5 smd custom (at 2 2.4 270) (size 1 3.8) (layers F.Cu F.Mask)
+      (net 11 "Net-(J2-Pad5)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.9) (xy -0.5 2) (xy 0.5 1.9)) (width 0))
+      ))
+    (pad 2 smd custom (at 0 2.5 270) (size 1 4) (layers F.Cu F.Mask)
+      (net 4 /SWDIO) (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 2) (xy -0.5 2.1) (xy 0.5 2)) (width 0))
+      ))
+    (pad 1 smd custom (at -2 2.8 270) (size 1 3.4) (layers F.Cu F.Mask)
+      (net 2 GND) (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.7) (xy 0.5 1.8) (xy 0.5 1.7)) (width 0))
+      ))
+    (pad 7 smd custom (at -4 2.4 270) (size 1 3.8) (layers F.Cu F.Mask)
+      (net 6 "Net-(J1-Pad7)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.9) (xy 0.5 2) (xy 0.5 1.9)) (width 0))
+      ))
+    (pad 10 smd custom (at 4 2.3 270) (size 1 3.6) (layers B.Cu B.Mask)
+      (net 7 "Net-(J1-Pad10)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.8) (xy -0.5 1.9) (xy 0.5 1.8)) (width 0))
+      ))
+    (pad 6 smd custom (at 2 2.4 270) (size 1 3.8) (layers B.Cu B.Mask)
+      (net 10 "Net-(J1-Pad6)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.9) (xy -0.5 2) (xy 0.5 1.9)) (width 0))
+      ))
+    (pad 3 smd custom (at -2 2.5 270) (size 1 4) (layers B.Cu B.Mask)
+      (net 3 /SWCLK) (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 2) (xy 0.5 2.1) (xy 0.5 2)) (width 0))
+      ))
+    (pad 8 smd custom (at -4 2.4 270) (size 1 3.8) (layers B.Cu B.Mask)
+      (net 9 "Net-(J1-Pad8)") (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 1.9) (xy 0.5 2) (xy 0.5 1.9)) (width 0))
+      ))
+    (pad 4 smd custom (at 0 2.5 270) (size 1 4) (layers B.Cu B.Mask)
+      (net 1 /~RESET~) (zone_connect 0)
+      (options (clearance outline) (anchor rect))
+      (primitives
+        (gr_poly (pts
+           (xy -0.5 2) (xy -0.5 2.1) (xy 0.5 2)) (width 0))
+      ))
   )
 
   (module Connector_DebugEdge:DebugEdge_URL_Silk (layer B.Cu) (tedit 5F4720B6) (tstamp 5F47903F)
@@ -522,6 +577,8 @@
     )
   )
 
+  (gr_poly (pts (xy 169.4815 90.4875) (xy 165.735 90.4875) (xy 169.4815 89.9795)) (layer F.SilkS) (width 0) (tstamp 5F48DA7C))
+  (gr_poly (pts (xy 169.545 99.8855) (xy 165.9255 99.5045) (xy 169.545 99.5045)) (layer F.SilkS) (width 0))
   (gr_arc (start 153 100) (end 152 100) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 169 100) (end 169 101) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 169 89) (end 170 89) (angle -90) (layer Edge.Cuts) (width 0.05))
