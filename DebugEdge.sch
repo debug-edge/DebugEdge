@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title "DebugEdge SWD Adapter"
 Date "2020-08-27"
 Rev "1"
@@ -159,4 +159,14 @@ Wire Wire Line
 	5400 4450 5850 4450
 Wire Wire Line
 	5400 4550 5850 4550
+Text Label 5050 3300 0    50   ~ 0
+SWO_TDO
+Text Label 5050 3400 0    50   ~ 0
+TDI
+Text Label 5050 3500 0    50   ~ 0
+TRACE_CLK
+Text Label 5050 3600 0    50   ~ 0
+TRACE0
+Text Label 5050 3700 0    50   ~ 0
+TRACE1
 $EndSCHEMATC
