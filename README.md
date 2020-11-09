@@ -1,5 +1,10 @@
 # Debug Edge
 A small bridge board to link a programmer to a PCB, via a card edge connector.
+See [debug-edge.io](https://debug-edge.io/) for more the full specification and rationale.
+
+![A 3d render of a completed DebugEdge PCB](DebugEdge.png)
+
+![The DebugEdge V1.1 specification](https://github.com/debug-edge/debug-edge.github.io/raw/main/assets/debug-edge.png)
 
 ## Goals
 
