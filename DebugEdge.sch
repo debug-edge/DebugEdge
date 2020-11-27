@@ -14,18 +14,16 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	3300 3600 3000 3600
-Wire Wire Line
 	6950 3500 7250 3500
 Wire Wire Line
 	6950 3400 7250 3400
-Text Label 4100 3150 0    50   ~ 0
+Text Label 3675 3875 3    50   ~ 0
 GND
 Text Label 7250 3400 2    50   ~ 0
 SWDIO
 Text Label 7250 3500 2    50   ~ 0
 SWCLK
-Text Label 3000 3600 0    50   ~ 0
+Text Label 3975 3200 1    50   ~ 0
 ~RESET~
 $Comp
 L power:GND #PWR0101
@@ -73,7 +71,7 @@ F 3 "" H 6200 3900 50  0001 C CNN
 	1    6200 3500
 	-1   0    0    -1  
 $EndComp
-Text Label 4250 3850 2    50   ~ 0
+Text Label 3575 3700 3    50   ~ 0
 Vref
 Text Label 5500 4450 0    50   ~ 0
 Vref
@@ -88,40 +86,13 @@ F 3 "" H 5400 4450 50  0001 C CNN
 	1    5400 4450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_DebugEdge:DebugEdge_02x05 J1
-U 1 1 5F47310F
-P 4050 3500
-F 0 "J1" H 3450 3800 50  0000 C CNN
-F 1 "Upstream Host Connector" H 4650 3800 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 4050 3900 50  0001 C CNN
-F 3 "" H 4050 3900 50  0001 C CNN
-	1    4050 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 3300 4800 3300
-Wire Wire Line
-	5450 3400 4800 3400
-Wire Wire Line
-	5450 3500 4800 3500
-Wire Wire Line
-	5450 3600 4800 3600
-Wire Wire Line
-	5450 3700 4800 3700
-Wire Wire Line
-	4050 3150 6200 3150
 Wire Wire Line
 	6950 3600 7250 3600
 Text Label 7250 3600 2    50   ~ 0
 ~RESET~
-Wire Wire Line
-	3300 3400 3000 3400
-Wire Wire Line
-	3300 3500 3000 3500
-Text Label 3000 3400 0    50   ~ 0
+Text Label 3575 3200 1    50   ~ 0
 SWDIO
-Text Label 3000 3500 0    50   ~ 0
+Text Label 3675 3200 1    50   ~ 0
 SWCLK
 $Comp
 L Jumper:SolderJumper_2_Bridged JP1
@@ -135,20 +106,7 @@ F 3 "~" H 5100 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 3850 4950 3850
-Wire Wire Line
 	5250 3850 6200 3850
-$Comp
-L Connector:Conn_01x02_Female J3
-U 1 1 5F4762C8
-P 6150 4450
-F 0 "J3" H 6178 4426 50  0000 L CNN
-F 1 "BYOP - Bring Your Own Power" H 6178 4335 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 6150 4450 50  0001 C CNN
-F 3 "~" H 6150 4450 50  0001 C CNN
-	1    6150 4450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5950 4450 5850 4450
 Connection ~ 5850 4450
@@ -159,14 +117,65 @@ Wire Wire Line
 	5400 4450 5850 4450
 Wire Wire Line
 	5400 4550 5850 4550
-Text Label 5050 3300 0    50   ~ 0
+Text Label 5450 3300 2    50   ~ 0
 SWO_TDO
-Text Label 5050 3400 0    50   ~ 0
+Text Label 5450 3400 2    50   ~ 0
 TDI
-Text Label 5050 3500 0    50   ~ 0
+Text Label 5450 3500 2    50   ~ 0
 TRACE_CLK
-Text Label 5050 3600 0    50   ~ 0
+Text Label 5450 3600 2    50   ~ 0
 TRACE0
-Text Label 5050 3700 0    50   ~ 0
+Text Label 5450 3700 2    50   ~ 0
+TRACE1
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5FA470BD
+P 3775 3500
+F 0 "J1" V 3871 3212 50  0000 R CNN
+F 1 "Conn_02x05_Odd_Even" V 3780 3212 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 3775 3500 50  0001 C CNN
+F 3 "~" H 3775 3500 50  0001 C CNN
+	1    3775 3500
+	0    -1   -1   0   
+$EndComp
+Text Label 4950 3850 2    50   ~ 0
+Vref
+Wire Wire Line
+	3675 3700 3675 3825
+Wire Wire Line
+	3975 3700 3975 3825
+Wire Wire Line
+	3975 3825 3775 3825
+Connection ~ 3675 3825
+Wire Wire Line
+	3675 3825 3675 3875
+Wire Wire Line
+	3775 3700 3775 3825
+Connection ~ 3775 3825
+Wire Wire Line
+	3775 3825 3675 3825
+NoConn ~ 3875 3700
+Text Label 3775 3200 1    50   ~ 0
+SWO_TDO
+Text Label 3875 3200 1    50   ~ 0
+TDI
+Text Label 6200 3150 0    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x05_Female J3
+U 1 1 5FA5524C
+P 6150 4350
+F 0 "J3" H 6042 3925 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 6042 4016 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 6150 4350 50  0001 C CNN
+F 3 "~" H 6150 4350 50  0001 C CNN
+	1    6150 4350
+	1    0    0    1   
+$EndComp
+Text Label 5950 4350 2    50   ~ 0
+TRACE_CLK
+Text Label 5950 4250 2    50   ~ 0
+TRACE0
+Text Label 5950 4150 2    50   ~ 0
 TRACE1
 $EndSCHEMATC
